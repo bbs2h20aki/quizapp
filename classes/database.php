@@ -4,7 +4,7 @@ class DB
 {
     private static function connect()
     {
-        $pdo = new PDO('mysql:host=localhost:8889;dbname=rest_api_php', 'root', 'root');
+        $pdo = new PDO('mysql:host=localhost:8889;dbname=rest_api_php', 'quizzteam3', 'QuizzApp2462');
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         return $pdo;
