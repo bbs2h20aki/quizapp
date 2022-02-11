@@ -10,7 +10,7 @@ $method = $_SERVER['REQUEST_METHOD'];
 $request_uri = $_SERVER['REQUEST_URI'];
    echo $request_uri;
 
-$tables = ['posts'];
+$tables = ['Request'];
 $url = rtrim($request_uri, '/');
 $url = filter_var($request_uri, FILTER_SANITIZE_URL);
 $url = explode('/', $url);
