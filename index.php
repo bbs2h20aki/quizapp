@@ -5,18 +5,18 @@ header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: POST, GET, DELETE, PUT');
 
 $method = $_SERVER['REQUEST_METHOD'];
-// echo $method;
+   echo $method;
 
 $request_uri = $_SERVER['REQUEST_URI'];
-// echo $request_uri;
+   echo $request_uri;
 
 $tables = ['posts'];
 $url = rtrim($request_uri, '/');
 $url = filter_var($request_uri, FILTER_SANITIZE_URL);
 $url = explode('/', $url);
-// print_r($url);
+   print_r($url);
 $tableName = (string) $url[3];
-// print_r($tableName);
+   print_r($tableName);
 if ($url[4] != null) {
     $id = (int) $url[4];
 } else {
