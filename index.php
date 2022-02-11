@@ -5,10 +5,10 @@ header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: POST, GET, DELETE, PUT');
 
 $method = $_SERVER['REQUEST_METHOD'];
-   echo $method;
+   //echo $method;
 
 $request_uri = $_SERVER['REQUEST_URI'];
-   echo $request_uri;
+   //echo $request_uri;
 
 $tables = ['Request'];
 $url = rtrim($request_uri, '/');
