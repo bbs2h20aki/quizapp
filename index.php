@@ -25,7 +25,7 @@ if ($url[4] != null) {
 
 if (in_array($tableName, $tables)) {
     // Include that api route
-    include_once './classes/Database.php';
+    include_once './classes/database.php';
     include_once './api/posts.php';
 } else {
     echo json_encode(['message' => 'Table does not exists']);
