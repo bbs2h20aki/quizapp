@@ -8,7 +8,7 @@
     <?php
     if(isset($_POST["submit"])){
       require("mysql.php");
-      $stmt = $mysql->prepare("SELECT * FROM accounts WHERE USERNAME = :user OR EMAIL = :user"); //Username überprüfen
+      $stmt = $mysql->prepare("SELECT * FROM users WHERE USERNAME = :user OR EMAIL = :user"); //Username überprüfen
       $stmt->bindParam(":user", $_POST["username"]);
       $stmt->execute();
       $count = $stmt->rowCount();

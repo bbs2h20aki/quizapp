@@ -25,7 +25,7 @@
     if(isset($_POST["submit"])){
       require("mysql.php");
       // Vorbereitung der ganzen Daten
-      $stmt = $mysql->prepare("SELECT * FROM accounts WHERE USERNAME = :user"); //Username überprüfen
+      $stmt = $mysql->prepare("SELECT * FROM users WHERE USERNAME = :user"); //Username überprüfen
       $stmt->bindParam(":user", $_POST["username"]);
       $stmt->execute(); // Ausführung
 		
@@ -39,7 +39,7 @@
 			// dann ist das Passwort richtig angelegt
 			
           //User anlegen
-          $stmt = $mysql->prepare("INSERT INTO accounts (USERNAME, PASSWORD, EMAIL) VALUES (:user, :pw, :email)");
+          $stmt = $mysql->prepare("INSERT INTO users (USERNAME, PASSWORD, EMAIL) VALUES (:user, :pw, :email)");
 		
 			
           $stmt->bindParam(":user", $_POST["username"]);
