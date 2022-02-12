@@ -2,13 +2,15 @@
 
 class DB
 {
-    $tns = "quizzapp_high"; 
-    $user = "quizzteam3"; 
-    $password = "QuizzApp2462"; 
+   // $tns = "quizzapp_high"; 
+    //$user = "quizzteam3"; 
+    //$password = "QuizzApp2462"; 
+
 
     private static function connect()
     {
-        $pdo = new PDO("oci:dbname=".$tns, $user, $password);
+        //$pdo = new PDO("oci:dbname=".$tns, $user, $password);
+        %pdo = new Pdo("mysql:host=localhost;dbname=quizzteam3","root","");
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         return $pdo;
