@@ -10,7 +10,7 @@ $user = "quizzteam3";
 $password = "QuizzApp2462";
 
 
-$sql = "SELECT * FROM user WHERE username='$name' AND passwort='$passwort'";
+$sql = "SELECT * FROM users WHERE username='$name' AND passwort='$passwort'";
 
 // Verbindung mit der Datenbank
 $db = new PDO("oci:dbname=".$tns, $user, $password);	
