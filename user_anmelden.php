@@ -2,18 +2,18 @@
 
 // Herausholen der Daten aus Android
 $name = $_POST['username'];
-$passwort = $_POST['passwort'];
+$password = $_POST['password'];
 
 // Datenbdankeinstellungen festlegen
 $tns = "quizzapp_high"; 
 $user = "quizzteam3"; 
-$password = "QuizzApp2462";
+$passworddb = "QuizzApp2462";
 
 
-$sql = "SELECT * FROM users WHERE username='$name' AND passwort='$passwort'";
+$sql = "SELECT * FROM users WHERE username='$name' AND password='$password'";
 
 // Verbindung mit der Datenbank
-$db = new PDO("oci:dbname=".$tns, $user, $password);	
+$db = new PDO("oci:dbname=".$tns, $user, $passworddb);	
 $result = $db->prepare($sql);
 $result->execute();
 
